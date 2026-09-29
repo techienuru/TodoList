@@ -1,12 +1,8 @@
-const FILTERS = [
-  { value: 'all', label: 'All' },
-  { value: 'active', label: 'Active' },
-  { value: 'completed', label: 'Completed' },
-]
+import { FILTERS } from '../lib/tasks.js'
 
 export function FilterBar({ value, onChange }) {
   return (
-    <div role="group" aria-label="Filter tasks" className="flex w-fit gap-1 rounded-pill bg-canvas p-1">
+    <div role="group" aria-label="Filter tasks" className="flex w-fit flex-wrap gap-1 rounded-lg bg-canvas p-1">
       {FILTERS.map((filter) => {
         const isSelected = filter.value === value
         return (
